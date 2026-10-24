@@ -241,7 +241,7 @@ Typed reads (`getNumber`, `getLength`, …) depend on the spec data and come wit
 
 - **Runtime dependencies:** none.
 - **GitHub Actions:** pinned to commit SHAs, updated weekly by Dependabot with a 7-day cooldown.
-- **Tooling** (tsdown, vitest, eslint, …): caret ranges (`^`), `bun.lock` committed. Whether Dependabot also covers npm packages, and with what cooldown, is still open.
+- **Tooling** (tsdown, vitest, eslint, …): caret ranges (`^`), `bun.lock` committed. Exception: TypeScript uses a tilde range (`~`), because typescript-eslint supports only specific TypeScript minor versions. Whether Dependabot also covers npm packages, and with what cooldown, is still open.
 - **Anything that affects test or benchmark results** — benchmark competitors (svgson, svg-parser) and icon sets — is pinned to **exact versions**, so snapshots and benchmark numbers change only when the code changes.
 - The package manager is declared in the `packageManager` field.
 

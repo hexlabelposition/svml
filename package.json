@@ -38,13 +38,20 @@
   "packageManager": "bun@1.4.0",
   "scripts": {
     "build": "tsdown",
-    "typecheck": "tsc --build"
+    "typecheck": "tsc --build",
+    "test": "vitest run",
+    "test:node": "vitest run --project node",
+    "test:browser": "vitest run --project browser"
   },
   "devDependencies": {
     "@arethetypeswrong/core": "^0.18.5",
     "@types/node": "^22",
+    "@vitest/browser-playwright": "^5.0.5",
+    "fast-check": "^4.10.2",
+    "playwright": "^1.64.1",
     "publint": "^0.3.25",
     "tsdown": "^0.23.2",
-    "typescript": "^6.0.3"
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.5"
   }
 }
