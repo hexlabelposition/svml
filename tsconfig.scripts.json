@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["es2024"],
+    "types": ["node"],
+    "tsBuildInfoFile": "node_modules/.cache/tsc/scripts.tsbuildinfo"
+  },
+  "include": ["*.config.ts", "scripts"]
+}

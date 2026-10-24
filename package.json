@@ -1,0 +1,50 @@
+{
+  "name": "svml",
+  "version": "0.0.0",
+  "description": "Fast, modular, type-safe toolkit for parsing, editing and serializing SVG as structured data.",
+  "keywords": [
+    "svg",
+    "xml",
+    "ast",
+    "parser",
+    "serializer",
+    "round-trip",
+    "typescript",
+    "esm"
+  ],
+  "homepage": "https://github.com/hexlabelposition/svml#readme",
+  "bugs": "https://github.com/hexlabelposition/svml/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexlabelposition/svml.git"
+  },
+  "license": "MIT",
+  "author": "Vladyslav Kudriashov",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "bun@1.4.0",
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --build"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/core": "^0.18.5",
+    "@types/node": "^22",
+    "publint": "^0.3.25",
+    "tsdown": "^0.23.2",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["es2022"],
+    "types": [],
+    "isolatedDeclarations": true,
+    "tsBuildInfoFile": "node_modules/.cache/tsc/lib.tsbuildinfo"
+  },
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts"]
+}
