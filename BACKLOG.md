@@ -6,13 +6,13 @@ Work is grouped into milestones in the intended order. Milestones are not dates.
 
 - [x] Verify the `svml` name on npm and GitHub; the overlap with Intel's Short Vector Math Library (SVML) does not matter: different ecosystem, and the npm name is free
 - [ ] Create the repository with MIT license, README, ARCHITECTURE, BACKLOG, CONTRIBUTING
-- [ ] Tooling: Bun, tsdown, TypeScript 6 (library, tests, scripts projects), Vitest 5 (node + browser), fast-check, ESLint, Prettier, publint, attw
+- [x] Tooling: Bun, tsdown, TypeScript 6 (library, tests, scripts projects), Vitest 5 (node + browser), fast-check, ESLint, Prettier, publint, attw
 - [x] `package.json`: `"type": "module"`, `"sideEffects": false`, `engines.node >= 22`, `exports` for `.` and `./package.json`
 - [x] tsdown: one entry (`src/index.ts`), `platform: "neutral"`, `target: "es2022"`
 - [x] Add the `packageManager` field
 - [ ] Finalize the dependency policy (D13), including whether Dependabot covers npm packages
 - [ ] Create the folder structure from ARCHITECTURE §3
-- [ ] ESLint boundary rules: imports only through folder `index.ts`, no cycles, `internal/` not exported
+- [x] ESLint boundary rules: imports only through folder `index.ts`, no cycles, `internal/` not exported
 - [ ] Workflows: CI (Node 22/24/26, Bun 1.2.23 + latest, Chromium/Firefox/WebKit), docs check, tag-based release with staged trusted publishing
 - [ ] Dependabot for GitHub Actions (SHA pins, weekly, 7-day cooldown)
 - [ ] CONTRIBUTING: Bun commands, Conventional Commits, release steps

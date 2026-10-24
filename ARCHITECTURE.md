@@ -68,11 +68,7 @@ interface SvgDoctype {
 
 type SvgNode = SvgElement | SvgText | SvgCData | SvgComment | SvgInstruction;
 type SvgDocumentChild =
-  | SvgElement
-  | SvgText
-  | SvgComment
-  | SvgInstruction
-  | SvgDoctype;
+  SvgElement | SvgText | SvgComment | SvgInstruction | SvgDoctype;
 
 interface XmlDeclaration {
   version: string;
@@ -144,7 +140,7 @@ svml/
 
 ### Boundary rules
 
-1. **A folder's `index.ts` is its public boundary.** Code outside a folder imports only from that folder's `index.ts`, never from its internal files. Enforced with ESLint (`no-restricted-imports` or `eslint-plugin-boundaries`).
+1. **A folder's `index.ts` is its public boundary.** Code outside a folder imports only from that folder's `index.ts`, never from its internal files. Enforced with `eslint-plugin-boundaries`, which also rejects any package or Node.js built-in imported from library code (D2).
 2. **Dependencies flow one way** and never form cycles:
 
    ```text
