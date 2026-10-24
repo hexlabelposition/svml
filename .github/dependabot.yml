@@ -1,0 +1,32 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    commit-message:
+      prefix: ci
+    groups:
+      actions:
+        patterns: ["*"]
+
+  - package-ecosystem: bun
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    commit-message:
+      prefix: build
+    groups:
+      dependencies:
+        patterns: ["*"]
+    ignore:
+      # typescript-eslint supports only specific TypeScript minor versions.
+      - dependency-name: typescript
+        update-types:
+          ["version-update:semver-minor", "version-update:semver-major"]
+      # Packages that affect test or benchmark results are pinned to exact
+      # versions and updated by hand (ARCHITECTURE §8). Add them here.

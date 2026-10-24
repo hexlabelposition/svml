@@ -10,11 +10,11 @@ Work is grouped into milestones in the intended order. Milestones are not dates.
 - [x] `package.json`: `"type": "module"`, `"sideEffects": false`, `engines.node >= 22`, `exports` for `.` and `./package.json`
 - [x] tsdown: one entry (`src/index.ts`), `platform: "neutral"`, `target: "es2022"`
 - [x] Add the `packageManager` field
-- [ ] Finalize the dependency policy (D13), including whether Dependabot covers npm packages
+- [x] Finalize the dependency policy (D13), including whether Dependabot covers npm packages
 - [ ] Create the folder structure from ARCHITECTURE §3
 - [x] ESLint boundary rules: imports only through folder `index.ts`, no cycles, `internal/` not exported
-- [ ] Workflows: CI (Node 22/24/26, Bun 1.2.23 + latest, Chromium/Firefox/WebKit), docs check, tag-based release with staged trusted publishing
-- [ ] Dependabot for GitHub Actions (SHA pins, weekly, 7-day cooldown)
+- [x] Workflows: CI (Node 22/24/26, Bun 1.2.23 + latest, Chromium/Firefox/WebKit), docs check, tag-based release with staged trusted publishing
+- [x] Dependabot for GitHub Actions (SHA pins, weekly, 7-day cooldown)
 - [ ] CONTRIBUTING: Bun commands, Conventional Commits, release steps
 
 ## v0.1 — serde + attributes

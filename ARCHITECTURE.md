@@ -18,7 +18,7 @@ This document records the decisions behind svml — SVML (Scalable Vector Markup
 | D10 | Parsing is strict: only well-formed XML is accepted                                                          | Accepted |
 | D11 | Parsing is safe for untrusted input: no external entities, configurable resource limits                      | Accepted |
 | D12 | Parse errors are `SvgParseError` with stable `code` values and a source position                             | Accepted |
-| D13 | Dependency pinning policy (section 8)                                                                        | Proposed |
+| D13 | Dependency pinning policy (section 8)                                                                        | Accepted |
 
 ## 2. Data model
 
@@ -233,12 +233,12 @@ Typed reads (`getNumber`, `getLength`, …) depend on the spec data and come wit
 - Every corpus file and every icon parses, round-trips and produces stable compact and pretty output.
 - Third-party fixtures keep their licenses in `test/fixtures/licenses/` and are never shipped in the package.
 
-## 8. Dependency policy (Proposed)
+## 8. Dependency policy
 
 - **Runtime dependencies:** none.
 - **GitHub Actions:** pinned to commit SHAs, updated weekly by Dependabot with a 7-day cooldown.
-- **Tooling** (tsdown, vitest, eslint, …): caret ranges (`^`), `bun.lock` committed. Exception: TypeScript uses a tilde range (`~`), because typescript-eslint supports only specific TypeScript minor versions. Whether Dependabot also covers npm packages, and with what cooldown, is still open.
-- **Anything that affects test or benchmark results** — benchmark competitors (svgson, svg-parser) and icon sets — is pinned to **exact versions**, so snapshots and benchmark numbers change only when the code changes.
+- **Tooling** (tsdown, vitest, eslint, …): caret ranges (`^`), `bun.lock` committed. Exception: TypeScript uses a tilde range (`~`), because typescript-eslint supports only specific TypeScript minor versions. Updated weekly by Dependabot as one grouped pull request with a 7-day cooldown; TypeScript minor and major updates are ignored and done by hand.
+- **Anything that affects test or benchmark results** — benchmark competitors (svgson, svg-parser) and icon sets — is pinned to **exact versions**, so snapshots and benchmark numbers change only when the code changes. Dependabot ignores these packages; they are updated by hand.
 - The package manager is declared in the `packageManager` field.
 
 ## 9. Compatibility
