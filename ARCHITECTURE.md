@@ -1,12 +1,12 @@
 # Architecture
 
-This document records the decisions behind svml — SVML (Scalable Vector Markup Library) — and the rules that keep the codebase consistent. Decisions marked **Accepted** are settled; **Proposed** ones are still under discussion. When a decision changes, update it here rather than leaving it implicit in code.
+This document records the decisions behind svml - SVML (Scalable Vector Markup Library) - and the rules that keep the codebase consistent. Decisions marked **Accepted** are settled; **Proposed** ones are still under discussion. When a decision changes, update it here rather than leaving it implicit in code.
 
 ## 1. Decision log
 
 | #   | Decision                                                                                                     | Status   |
 | --- | ------------------------------------------------------------------------------------------------------------ | -------- |
-| D1  | Single npm package `svml` — SVML (Scalable Vector Markup Library), MIT, TypeScript, ESM-only                 | Accepted |
+| D1  | Single npm package `svml` - SVML (Scalable Vector Markup Library), MIT, TypeScript, ESM-only                 | Accepted |
 | D2  | Zero runtime dependencies                                                                                    | Accepted |
 | D3  | The parser, serializer and AST are part of svml itself, not a dependency on another SVG library              | Accepted |
 | D4  | The AST is made of plain objects, mutated in place and copied explicitly with `clone()`                      | Accepted |
@@ -238,7 +238,7 @@ Typed reads (`getNumber`, `getLength`, …) depend on the spec data and come wit
 - **Runtime dependencies:** none.
 - **GitHub Actions:** pinned to commit SHAs, updated weekly by Dependabot with a 7-day cooldown.
 - **Tooling** (tsdown, vitest, eslint, …): caret ranges (`^`), `bun.lock` committed. Exception: TypeScript uses a tilde range (`~`), because typescript-eslint supports only specific TypeScript minor versions. Updated weekly by Dependabot as one grouped pull request with a 7-day cooldown; TypeScript minor and major updates are ignored and done by hand.
-- **Anything that affects test or benchmark results** — benchmark competitors (svgson, svg-parser) and icon sets — is pinned to **exact versions**, so snapshots and benchmark numbers change only when the code changes. Dependabot ignores these packages; they are updated by hand.
+- **Anything that affects test or benchmark results** - benchmark competitors (svgson, svg-parser) and icon sets - is pinned to **exact versions**, so snapshots and benchmark numbers change only when the code changes. Dependabot ignores these packages; they are updated by hand.
 - The package manager is declared in the `packageManager` field.
 
 ## 9. Compatibility

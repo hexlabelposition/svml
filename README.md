@@ -7,7 +7,7 @@
 
 ## Why
 
-Working with SVG in JavaScript today usually means combining several packages — one to parse, one for paths, one for colors, one for bounds — each with its own data format, its own types (or none), and often years without updates.
+Working with SVG in JavaScript today usually means combining several packages - one to parse, one for paths, one for colors, one for bounds - each with its own data format, its own types (or none), and often years without updates.
 
 svml aims to be **one coherent toolkit** built around a single document model:
 
@@ -73,11 +73,11 @@ Malformed input throws an `SvgParseError` with a stable `code` and the `line`, `
 
 ## Key characteristics
 
-- **ESM-only** — no CommonJS build.
+- **ESM-only** - no CommonJS build.
 - **Zero runtime dependencies.**
-- **Tree-shakeable** — `"sideEffects": false`; a single entry point, `svml`.
-- **Round trip** — the tree survives `stringify` → `parse` unchanged. Lexical details such as quote style, entity spelling and whitespace inside tags are normalized.
-- **Runtimes** — Node.js ≥ 22, Bun ≥ 1.2.23, Chromium, Firefox and WebKit, all tested in CI.
+- **Tree-shakeable** - `"sideEffects": false`; a single entry point, `svml`.
+- **Round trip** - the tree survives `stringify` → `parse` unchanged. Lexical details such as quote style, entity spelling and whitespace inside tags are normalized.
+- **Runtimes** - Node.js ≥ 22, Bun ≥ 1.2.23, Chromium, Firefox and WebKit, all tested in CI.
 
 ## Non-goals
 
@@ -89,7 +89,7 @@ svml is **not** a JSX parser, a renderer, a visual editor, or a sanitizer. Parsi
 
 ## Contributing
 
-The project is not open for contributions yet. Once v0.1 is in progress, development setup will be documented in CONTRIBUTING.md.
+The project is not open for contributions yet. Development setup and conventions are described in [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## License
 
