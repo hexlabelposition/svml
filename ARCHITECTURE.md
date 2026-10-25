@@ -6,7 +6,7 @@ This document records the decisions behind svml - SVML (Scalable Vector Markup L
 
 | #   | Decision                                                                                                     | Status   |
 | --- | ------------------------------------------------------------------------------------------------------------ | -------- |
-| D1  | Single npm package `svml` - SVML (Scalable Vector Markup Library), MIT, TypeScript, ESM-only                 | Accepted |
+| D1  | Single package `svml` - SVML (Scalable Vector Markup Library), MIT, TypeScript, ESM-only                     | Accepted |
 | D2  | Zero runtime dependencies                                                                                    | Accepted |
 | D3  | The parser, serializer and AST are part of svml itself, not a dependency on another SVG library              | Accepted |
 | D4  | The AST is made of plain objects, mutated in place and copied explicitly with `clone()`                      | Accepted |
@@ -223,7 +223,7 @@ Typed reads (`getNumber`, `getLength`, …) depend on the spec data and come wit
 - Tests in Chromium, Firefox and WebKit.
 - Markdown formatting check.
 
-**Release:** pushing a `vX.Y.Z` tag that matches `package.json` runs CI, builds the tarball once, and stages it with npm trusted publishing and provenance. The version becomes installable only after a maintainer approves it with 2FA. A GitHub release is created from the same tag.
+**Release:** pushing a `vX.Y.Z` tag that matches `package.json` runs CI, builds the tarball once and attaches it to a draft GitHub release created from the same tag. A maintainer reviews the draft and publishes it.
 
 **Conventions:** Conventional Commits (`feat`, `fix`, `perf`, `docs`, `test`, `build`, `ci`, `chore`); release commits are `chore: release X.Y.Z`. Workflow changes are checked with actionlint.
 

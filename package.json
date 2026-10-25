@@ -1,6 +1,7 @@
 {
   "name": "svml",
   "version": "0.0.0",
+  "private": true,
   "description": "Fast, modular, type-safe toolkit for parsing, editing and serializing SVG as structured data.",
   "keywords": [
     "svg",

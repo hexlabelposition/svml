@@ -3,7 +3,7 @@
 **SVML (Scalable Vector Markup Library)** is a fast, modular, type-safe toolkit for working with SVG as structured data.
 
 > [!WARNING]
-> **Status: pre-alpha.** svml is in the design phase. Nothing is published to npm yet, and every API shown below is a draft that may change. See [BACKLOG.md](./BACKLOG.md) for what is planned and [ARCHITECTURE.md](./ARCHITECTURE.md) for how it is built.
+> **Status: pre-alpha.** svml is in the design phase. Releases are published on [GitHub](https://github.com/hexlabelposition/svml/releases) only, and every API shown below is a draft that may change. See [BACKLOG.md](./BACKLOG.md) for what is planned and [ARCHITECTURE.md](./ARCHITECTURE.md) for how it is built.
 
 ## Why
 
@@ -85,7 +85,7 @@ svml is **not** a JSX parser, a renderer, a visual editor, or a sanitizer. Parsi
 
 ## Name
 
-**SVML** stands for **Scalable Vector Markup Library** and combines **SVG** and **XML**. The npm package and the import path are written in lowercase: `svml`.
+**SVML** stands for **Scalable Vector Markup Library** and combines **SVG** and **XML**. The package name and the import path are written in lowercase: `svml`.
 
 ## Contributing
 

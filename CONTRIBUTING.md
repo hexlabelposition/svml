@@ -72,26 +72,11 @@ A release is a `vX.Y.Z` tag on a commit whose `package.json` has the same versio
    git push origin main vX.Y.Z
    ```
 
-3. The Release workflow checks the tag, runs CI, builds the tarball once, stages it on npm and creates a draft GitHub release with the same tarball. Pre-release versions (`X.Y.Z-beta.N`) are staged with the `next` dist-tag.
-4. Approve the staged version with 2FA. Only then does it become installable:
+3. The Release workflow checks the tag, runs CI, builds the tarball once and creates a draft GitHub release with the tarball attached. Versions with a pre-release part (`X.Y.Z-beta.N`) are marked as pre-releases.
+4. Review the draft release and publish it.
 
-   ```sh
-   npm stage list svml
-   npm stage approve <stage-id>
-   ```
+A release can be installed from its tarball:
 
-   To drop it instead, run `npm stage reject <stage-id>`.
-
-5. Publish the draft GitHub release.
-
-### One-time setup
-
-Staged publishing works only for a package that already exists on npm, and the workflow authenticates as a trusted publisher. Before the first release:
-
-1. Publish the first version by hand with `npm publish`.
-2. Create the `npm` environment in the repository settings (Settings → Environments). Required reviewers can be added there as a second approval.
-3. Register the workflow as a trusted publisher:
-
-   ```sh
-   npm trust github svml --repo hexlabelposition/svml --file release.yml --env npm --allow-stage-publish
-   ```
+```sh
+npm install https://github.com/hexlabelposition/svml/releases/download/vX.Y.Z/svml-X.Y.Z.tgz
+```

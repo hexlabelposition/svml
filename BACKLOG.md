@@ -4,7 +4,7 @@ Work is grouped into milestones in the intended order. Milestones are not dates.
 
 ## v0.0 - Project setup
 
-- [x] Verify the `svml` name on npm and GitHub; the overlap with Intel's Short Vector Math Library (SVML) does not matter: different ecosystem, and the npm name is free
+- [x] Verify the `svml` name on GitHub; the overlap with Intel's Short Vector Math Library (SVML) does not matter: different ecosystem
 - [x] Create the repository with MIT license, README, ARCHITECTURE, BACKLOG, CONTRIBUTING
 - [x] Tooling: Bun, tsdown, TypeScript 6 (library, tests, scripts projects), Vitest 5 (node + browser), fast-check, ESLint, Prettier, publint, attw
 - [x] `package.json`: `"type": "module"`, `"sideEffects": false`, `engines.node >= 22`, `exports` for `.` and `./package.json`
@@ -13,7 +13,7 @@ Work is grouped into milestones in the intended order. Milestones are not dates.
 - [x] Finalize the dependency policy (D13), including whether Dependabot covers npm packages
 - [ ] Create the folder structure from ARCHITECTURE §3
 - [x] ESLint boundary rules: imports only through folder `index.ts`, no cycles, `internal/` not exported
-- [x] Workflows: CI (Node 22/24/26, Bun 1.2.23 + latest, Chromium/Firefox/WebKit), docs check, tag-based release with staged trusted publishing
+- [x] Workflows: CI (Node 22/24/26, Bun 1.2.23 + latest, Chromium/Firefox/WebKit), docs check, tag-based GitHub release
 - [x] Dependabot for GitHub Actions (SHA pins, weekly, 7-day cooldown)
 - [x] CONTRIBUTING: Bun commands, Conventional Commits, release steps
 
@@ -48,7 +48,7 @@ Work is grouped into milestones in the intended order. Milestones are not dates.
 
 - [ ] TSDoc on every public export
 - [ ] publint and attw pass
-- [ ] Publish `svml@0.1.0`
+- [ ] Release v0.1.0 on GitHub
 
 ## v0.2 - spec types
 
