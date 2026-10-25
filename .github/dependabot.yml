@@ -28,5 +28,8 @@ updates:
       - dependency-name: typescript
         update-types:
           ["version-update:semver-minor", "version-update:semver-major"]
+      # Node.js types follow the minimum supported Node.js version (engines.node).
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
       # Packages that affect test or benchmark results are pinned to exact
       # versions and updated by hand (ARCHITECTURE §8). Add them here.
